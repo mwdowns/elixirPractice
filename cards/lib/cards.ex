@@ -109,8 +109,10 @@ defmodule Cards do
 
   ## Examples
 
-      iex> Cards.deal(deck, 5)
+      iex> {hand, rest_of_deck} = Cards.deal(deck, 2)
       {["card", "card"], ["card", "card", "card"]}
+      iex> hand
+      ["card", "card"]
 
   """
   def deal(deck, hand_size) do
@@ -176,8 +178,10 @@ defmodule Cards do
 
   ## Examples
 
-      iex> Cards.create_hand(5)
+      iex> {hand, rest_of_deck} = Cards.create_hand(2)
       {["card", "card"], ["card", "card", "card"]}
+      iex> hand
+      ["card", "card"]
 
   """
   def create_hand(hand_size) do
